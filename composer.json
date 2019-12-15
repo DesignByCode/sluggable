@@ -1,0 +1,46 @@
+{
+    "name": "designbycode/sluggable",
+    "description": "Laravel sluggable trait",
+    "keywords": ["laravel", "slug", "sluggable", "trait"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claude Myburgh",
+            "email": "claude@deisgnbycode.co.za"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DesignByCode\\Sluggable\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DesignByCode\\Sluggable\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+        },
+        "laravel": {
+            "providers": [
+                "DesignByCode\\Sluggable\\Providers\\SluggableServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "~5.8|^6.0"
+    }
+}
