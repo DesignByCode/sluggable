@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'source' => null,
+    'source' => 'name',
 ];
