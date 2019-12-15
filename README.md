@@ -1,4 +1,4 @@
-# Admin panel for laravel application
+# Laravel Sluggable
 
 ```php
 $ composer require designbycode/admin
