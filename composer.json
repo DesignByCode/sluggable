@@ -14,7 +14,7 @@
             "DesignByCode\\Sluggable\\": "src/"
         },
         "files": [
-            "src/helpers.php"
+          
         ]
     },
     "autoload-dev": {
