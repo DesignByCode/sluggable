@@ -14,7 +14,9 @@ class SluggableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        if($this->app['config']->get('sluggable') === null) {
+           $this->app['config']->set('sluggable', require __DIR__ . '/../config/sluggable.php');
+        }
     }
 
     /**

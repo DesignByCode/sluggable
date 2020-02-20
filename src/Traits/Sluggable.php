@@ -2,23 +2,27 @@
 
 namespace DesignByCode\Sluggable\Traits;
 
+
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 
 trait Sluggable
 {
 
-    // abstract public function sluggables();
 
-
+    /**
+     * [bootSluggable description]
+     * @return [type] [description]
+     */
     public static function bootSluggable()
     {
-
-        static::creating(function($model) {
+        
+        static::creating(function(Model $model) {
             $model->slug = Str::slug($model->name);
         });
 
-        static::updating(function($model) {
+        static::updating(function(Model $model) {
             $model->slug = Str::slug($model->name);
         });
     }
