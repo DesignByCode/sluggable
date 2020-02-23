@@ -31,7 +31,7 @@ trait Sluggable
     /**
      * @return mixed
      */
-    public function createSlug()
+    protected function createSlug()
     {
         return $this->setAttribute('slug', Str::slug($this->getSlugFromField()));
     }
@@ -40,7 +40,7 @@ trait Sluggable
     /**
      * @return mixed
      */
-    public function getSlugFromField()
+    protected function getSlugFromField()
     {
         return $this->getAttribute($this->slugFrom());
     }
