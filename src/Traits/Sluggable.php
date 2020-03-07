@@ -9,8 +9,6 @@ use Illuminate\Support\Str;
 
 trait Sluggable
 {
-
-
     /**
      * [bootSluggable description]
      * @return [type] [description]
@@ -25,8 +23,11 @@ trait Sluggable
             $model->createSlug();
         });
 
-    }
+        static::saving(function(Model $model) {
+            $model->createSlug();
+        });
 
+    }
 
     /**
      * @return mixed
@@ -36,7 +37,6 @@ trait Sluggable
         return $this->setAttribute('slug', Str::slug($this->getSlugFromField()));
     }
 
-
     /**
      * @return mixed
      */
@@ -45,15 +45,12 @@ trait Sluggable
         return $this->getAttribute($this->slugFrom());
     }
 
-
     /**
      * @return string
      */
     public function slugFrom()
     {
-        return 'name';
+        return 'title';
     }
-
-
 
 }
