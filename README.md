@@ -1,5 +1,10 @@
 # Laravel Sluggable
 
+[![Latest Stable Version](https://poser.pugx.org/designbycode/sluggable/v/stable)](https://packagist.org/packages/designbycode/sluggable)
+[![Total Downloads](https://poser.pugx.org/designbycode/sluggable/downloads)](https://packagist.org/packages/designbycode/sluggable)
+[![Latest Unstable Version](https://poser.pugx.org/designbycode/sluggable/v/unstable)](https://packagist.org/packages/designbycode/sluggable)
+[![License](https://poser.pugx.org/designbycode/sluggable/license)](https://packagist.org/packages/designbycode/sluggable)
+
 Genarate a slug from Laravel Eloquent models
 
 * [Installation](#installation)
@@ -60,10 +65,10 @@ class Product extends Model
 	/**
 	* @return string
 	*/
-    public function slugFrom()
-    {
-        return 'name';
-    }
+	public function slugFrom()
+	{
+	    return 'name';
+	}
 }
 ```
 
